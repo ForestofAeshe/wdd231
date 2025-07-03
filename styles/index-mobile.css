@@ -1,7 +1,5 @@
-@media screen and (max-width: 1200px) {
-
     :root {
-        --color-one: rgb(37,132,184);
+        --color-one: #2584b8;
         --color-two: rgb(77,4,4);
     }
 
@@ -9,13 +7,12 @@
         justify-self: center;
         padding: 5px;
         margin: 5px;
-
     }
 
     header {
         display: flex;
         flex-direction: row;
-        max-height: 50vw;
+        max-height: 20rem;
         background-color: var(--color-two);
         color: var(--color-one);
     }
@@ -41,7 +38,8 @@
     }
 
     footer {
-        margin: 1rem 0rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 
     footer p {
@@ -58,4 +56,3 @@
         max-height: 5rem;
     }
     
-}
