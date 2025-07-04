@@ -1,0 +1,27 @@
+
+:root {
+    --color-one: rgb(22,47,171);
+    --color-two: rgb(97,20,7);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: var(--color-two);
+    padding: 10px 0px;
+    max-height: 10rem;
+}
+
+header img {
+    max-height: 5rem;
+    max-width: 5rem;
+}
+
+.hamburger {
+    display:none;
+}
+
+body main, body footer {
+    display: none;
+}
