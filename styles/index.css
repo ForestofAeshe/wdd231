@@ -1,7 +1,7 @@
 @media screen and (min-width: 1201px) {
 
     :root{
-        --color-one: rgb(22, 47, 171);
+        --color-one: rgb(23, 102, 206);
         --color-two: rgb(97, 20, 7);
     }
 
@@ -50,6 +50,7 @@
         grid-template-columns: 18rem 18rem 1rem 18rem 18rem;
         grid-template-rows: 5rem 15rem 10rem;
         background-color: var(--color-one);
+        justify-content: center;
     }
 
     main .main-heading {
