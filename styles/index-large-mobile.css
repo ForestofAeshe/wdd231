@@ -22,7 +22,11 @@
         display:none;
     }
 
-    body main, body footer {
+    body main {
+
+    } 
+    
+    body footer {
         display: none;
     }
 }

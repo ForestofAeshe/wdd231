@@ -22,6 +22,10 @@ header img {
     display:none;
 }
 
-body main, body footer {
-    display: none;
+body main {
+
+    } 
+    
+    body footer {
+        display: none;
 }
