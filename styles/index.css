@@ -1,7 +1,7 @@
 @media screen and (min-width: 1201px) {
 
     :root{
-        --color-one: rgb(23, 102, 206);
+        --color-one: rgb(124, 152, 218);
         --color-two: rgb(97, 20, 7);
     }
 
@@ -93,7 +93,7 @@
 
     .secondClass img {
         display: grid;
-        grid: 2/3;
+        grid-column: 1/2;
         width: auto;
         height: 80%;
         align-self: center;
