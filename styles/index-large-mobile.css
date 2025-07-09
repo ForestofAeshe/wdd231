@@ -1,4 +1,4 @@
-@media screen and (min-width: 500px) and (max-width: 1200px) {
+@media screen and (min-width: 350px) and (max-width: 1200px) {
     :root {
         --color-one: rgb(124, 152, 218);
         --color-two: rgb(97,20,7);
@@ -19,8 +19,16 @@
         max-width: 10rem;
     }
 
+    #navigation-bar {
+        display: none;
+    }
+
+    #navigation-bar.show {
+        display: block;
+    }
+
     .hamburger::before  {
-    content: "\2630"; /*Cheeseburger*/
+        content: "\2630"; /*Cheeseburger*/
     }
 
     .hamburger.show::before {

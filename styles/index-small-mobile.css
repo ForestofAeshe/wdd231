@@ -19,6 +19,14 @@ header img {
     max-width: 5rem;
 }
 
+#navigation-bar {
+    display: none;
+}
+
+#navigation-bar.show {
+    display: block;
+}
+
 .hamburger::before  {
     content: "\2630"; /*Cheeseburger*/
 }
