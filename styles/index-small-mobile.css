@@ -19,38 +19,13 @@ header img {
     max-width: 5rem;
 }
 
-    .hamburger {
-        position:fixed;
-        z-index:100;
-        top:1rem;
-        right:1rem;
-        padding: 4px;
-        border: black solid 1px;
-        background-color: white;
-        cursor: pointer;
-    }
+.hamburger::before  {
+    content: "\2630"; /*Cheeseburger*/
+}
 
-    .closeIcon {
-        display: none;
-    }
-
-    .menu {
-        position:fixed;
-        transform: translateY(-100%);
-        top: 0;
-        left: 0;
-        right:0;
-        bottom: 0;
-        z-index: 99;
-        background-color: black;
-        color: white;
-        list-style: none;
-        padding-top: 4rem;
-    }
-
-    .showMenu {
-        transform: translateY(0);
-    }
+.hamburger.show::before {
+    content: "\00d7"; /* X */
+}
 
 main {
     display: flex;
