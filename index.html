@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/index-large-mobile.css">
+    <link rel="stylesheet" href="styles/index-mobile.css">
     <link rel="stylesheet" href="styles/index-desktop.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="scripts/index.js" defer></script>
@@ -43,12 +43,13 @@
         </div>
         <div class="thirdClass">
             <h2>Web Certificate Courses</h2>
-            <p>course-1</p>
-            <p>course-2</p>
-            <p>course-3</p>
-            <p>course-4</p>
-            <p>course-5</p>
-            <p>course-6</p>
+            <nav id="course-nav">
+                <li><a id="all-courses" href="#all">All Courses</a></li>
+                <li><a id="wdd-courses" href="#wdd">WDD Courses</a></li>
+                <li><a id="cse-courses" href="#cse">CSE Courses</a></li>
+            </nav>
+            <div id="course-list">
+            </div>
         </div>
     </main>
     <footer>
