@@ -91,21 +91,24 @@ const courses = [
 
 let courseList  = "";
 
-document.getElementById("all-courses").addEventListener("click", myFunction);
-document.getElementById("wdd-courses").addEventListener("click", myFunction);
-document.getElementById("cse-courses").addEventListener("click", myFunction);
+document.getElementById("all-courses").addEventListener("click", myFunction());
+document.getElementById("wdd-courses").addEventListener("click", myFunction());
+document.getElementById("cse-courses").addEventListener("click", myFunction());
+
 
 function myFunction() {
 
-    let courseButton = window.location.href.split("#")[1]
+    
+
+    let courseButton = window.location.href.split("#")[0]
     courses.filter((data) =>
     {
         if (courseButton === "All Courses") {
             return data.courses > 2;
 
-        } else if (courseButton === "WDD Courses") {
+        } else if (courseButton === "wdd") {
             return data.subject == "WDD";
-        } else if (courseButton === "CSE Courses") {
+        } else if (courseButton === "cse") {
             return data.subject == "CSE";
         } else {
             return data;
