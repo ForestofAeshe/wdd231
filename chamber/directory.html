@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/normalize-chamber.css">
+    <script src="scripts/directory.js" defer></script>
+
     <meta property="og:description" content="WDD231 Chamber Project Directory Page">
     <meta property="og:title" content="Chamber Directory">
     <meta property="og:image" content="images/favicon.ico">
@@ -22,11 +25,32 @@
         <li><a href="#">Discover</a></li>
     </nav>
     <main>
-
+        <div id="cardButton" class="cardButton">
+            <li><a id="all" href="all">All</a></li>
+            <li><a id="1" href="1">Tier 1</a></li>
+            <li><a id="2" href="2">Tier 2</a></li>
+            <li><a id="3" href="3">Tier 3</a></li>
+        </div>
+        <div class="member-cards" id="member-cards"></div>
     </main>
     <footer>
-        <p>&copy; <script>document.write(new Date().getFullYear())</script> Michael Petersen USA</p>
-        <p id="lastModified">Last Modified: <script>document.write(document.lastModified)</script></p>
+        <div class="social-media">
+            <!-- <a href="www.linkedin.com/in/michael-s-petersen"><img src="images/linkedin-logo.svg" alt="linkedin-logo"></a> -->
+            <!-- <a href="https://www.instagram.com/"><img src="images/instagram-logo.jpg" alt="instagram-logo"></a> -->
+            <!-- <a href="https://github.com/ForestofAeshe"><img src="images/github-logo.svg" alt="github-logo"></a> -->
+        </div>
+        <div class="student-info">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> Michael Petersen USA</p>
+            <p id="lastModified">Last Modified: <script>document.write(document.lastModified)</script></p>
+        </div>
+        <div id="contact-info">
+            <h2>American  Fork Contact Info</h2>
+            <!-- address line 1 -->
+            <!-- address line 2-->
+            <!-- address city, zip-->
+            <!-- email -->
+            <!-- phone -->
+        </div>
     </footer>
 </body>
 </html>

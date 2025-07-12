@@ -1,0 +1,91 @@
+{"members" : [{
+    "fName":"Billy",
+    "lName":"Bob Joe",
+    "address": {
+        "lineOne":"123rd Ave 45 South123rd Ave 45 South",
+        "lineTwo":"STE67",
+        "city":"American Fork",
+        "zip":84003
+    },
+    "phone":1234567890,
+    "portrait":"image/url",
+    "membershiplevel":1
+},
+{
+    "fName":"Billy",
+    "lName":"Bob Joe",
+    "address": {
+        "lineOne":"123rd Ave 45 South",
+        "lineTwo":"STE67",
+        "city":"American Fork",
+        "zip":84003
+    },
+    "phone":1234567890,
+    "portrait":"image/url",
+    "membershiplevel":1
+},
+{
+    "fName":"Billy",
+    "lName":"Bob Joe",
+    "address": {
+        "lineOne":"123rd Ave 45 South",
+        "lineTwo":"STE67",
+        "city":"American Fork",
+        "zip":84003
+    },
+    "phone":1234567890,
+    "portrait":"image/url",
+    "membershiplevel":1
+},
+{
+    "fName":"Billy",
+    "lName":"Bob Joe",
+    "address": {
+        "lineOne":"123rd Ave 45 South",
+        "lineTwo":"STE67",
+        "city":"American Fork",
+        "zip":84003
+    },
+    "phone":1234567890,
+    "portrait":"image/url",
+    "membershiplevel":1
+},
+{
+    "fName":"Billy",
+    "lName":"Bob Joe",
+    "address": {
+        "lineOne":"123rd Ave 45 South",
+        "lineTwo":"STE67",
+        "city":"American Fork",
+        "zip":84003
+    },
+    "phone":1234567890,
+    "portrait":"image/url",
+    "membershiplevel":2
+},
+{
+    "fName":"Billy",
+    "lName":"Bob Joe",
+    "address": {
+        "lineOne":"123rd Ave 45 South",
+        "lineTwo":"STE67",
+        "city":"American Fork",
+        "zip":84003
+    },
+    "phone":1234567890,
+    "portrait":"image/url",
+    "membershiplevel":2
+},
+{
+    "fName":"Billy",
+    "lName":"Bob Joe",
+    "address": {
+        "lineOne":"123rd Ave 45 South",
+        "lineTwo":"STE67",
+        "city":"American Fork",
+        "zip":84003
+    },
+    "phone":1234567890,
+    "portrait":"image/url",
+    "membershiplevel":3
+}]}
