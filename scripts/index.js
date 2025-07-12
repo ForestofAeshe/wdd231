@@ -89,42 +89,32 @@ const courses = [
 ]
 // ^^Course List Array
 
-let courseList  = "";
-
+document.getElementById("all-courses").addEventListener("load", myFunction());
 document.getElementById("all-courses").addEventListener("click", myFunction());
 document.getElementById("wdd-courses").addEventListener("click", myFunction());
 document.getElementById("cse-courses").addEventListener("click", myFunction());
 
-
 function myFunction() {
 
-    
+    let classList  = "";
 
-    let courseButton = window.location.href.split("#")[0]
-    courses.filter((data) =>
-    {
-        if (courseButton === "All Courses") {
-            return data.courses > 2;
-
-        } else if (courseButton === "wdd") {
+    let courseButton = window.location.href.split("#")[1]
+    courses
+    .filter((data) =>
+    {if (courseButton === "all") {
+            return data.subject;
+        } else if (courseButton === "WDD") {
             return data.subject == "WDD";
-        } else if (courseButton === "cse") {
+        } else if (courseButton === "CSE") {
             return data.subject == "CSE";
-        } else {
-            return data;
-        }
-    })
-
-    .map((data) =>
+        }}).map((data) =>
     {
         classList += `<div id="course-list">
-            <h2 class="course-name">${data.subject}${data.number}</h2>
-            <div class="course-complete">`
-            if (data.completed === true) {
-                "completed &check";
-            } else {
-                "not completed &#10007";
-            }
-            `</div>`
+            <h2 class="course-name">${data.subject}  ${data.number}</h2>
+            <div class="course-complete">${data.completed}</div>
+            `
     })
+    
+    document.getElementById("course-list").innerHTML = classList;
 }
+

@@ -112,6 +112,16 @@
         align-items: center;
     }
 
+    .thirdClass nav {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .thirdClass #course-list {
+        display: flex;
+        flex-direction: column;
+    }
+
     body footer {
         display: flex;
         flex-direction: column;
