@@ -3,7 +3,7 @@ const card = document.querySelector('#member-cards');
 
 let allMembers = [];
 
-// getMemberDirectory(url);
+getMemberDirectory(url);
 document.getElementById("all").addEventListener("click", getMemberDirectory(url));
 document.getElementById("1").addEventListener("click", getMemberDirectory(url));
 document.getElementById("2").addEventListener("click", getMemberDirectory(url));

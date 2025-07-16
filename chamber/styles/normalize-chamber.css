@@ -1,0 +1,36 @@
+:root{
+    --color-one: navy;
+}
+
+* {
+    background-color: navy;
+    color: gray;
+}
+
+body .header {
+    border: black solid 2px;
+}
+
+body div header {
+    border: black solid 2px;
+}
+body div nav {
+    border: black solid 2px;
+}
+
+body main {
+    border: black solid 2px;
+}
+
+main .cardButton {
+    border: black solid 2px;
+}
+
+main .member-cards {
+    border: black solid 2px;
+}
+
+footer {
+    border: black solid 2px;
+    
+}
