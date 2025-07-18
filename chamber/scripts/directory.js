@@ -5,10 +5,11 @@ let allMembers = [];
 
 getMemberDirectory(dataUrl);
 
-document.getElementById("all").addEventListener("click", getMemberDirectory(dataUrl));
-document.getElementById("1").addEventListener("click", getMemberDirectory(dataUrl));
-document.getElementById("2").addEventListener("click", getMemberDirectory(dataUrl));
-document.getElementById("3").addEventListener("click", getMemberDirectory(dataUrl));
+document.getElementById('#all').addEventListener("load", getMemberDirectory(dataUrl));
+document.getElementById("#all").addEventListener("click", getMemberDirectory(dataUrl));
+document.getElementById("#1").addEventListener("click", getMemberDirectory(dataUrl));
+document.getElementById("#2").addEventListener("click", getMemberDirectory(dataUrl));
+document.getElementById("#3").addEventListener("click", getMemberDirectory(dataUrl));
 
 async function getMemberDirectory(filePath) {
     const response = await fetch(filePath);
@@ -39,7 +40,7 @@ function displayMembers (data) {
                 break;
             default:
                 break;
-                
+
         }}).map((data) => {
             cardList += `<div class="member-cards" id="member-cards">
             <h2 id="fullname">${data.fName} ${data.lName}</h2>
