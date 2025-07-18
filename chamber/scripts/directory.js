@@ -4,6 +4,7 @@ const card = document.querySelector('#member-cards');
 let allMembers = [];
 
 getMemberDirectory(url);
+
 document.getElementById("all").addEventListener("click", getMemberDirectory(url));
 document.getElementById("1").addEventListener("click", getMemberDirectory(url));
 document.getElementById("2").addEventListener("click", getMemberDirectory(url));
@@ -12,8 +13,9 @@ document.getElementById("3").addEventListener("click", getMemberDirectory(url));
 async function getMemberDirectory(filePath) {
     const response = await fetch(filePath);
     const data = await response.json();
+    let allMembers = [];
 
-    console.table(data.members);
+    // console.table(data.members);
 
     allMembers = data.members;
     displayMembers(allMembers);
@@ -27,10 +29,13 @@ function displayMembers (data) {
 
         switch (cardButton === "all") {
             case "1":
+                data.membershipLevel === 1;
                 break;
             case "2":
+                data.membershipLevel === 2;
                 break;
             case "3":
+                data.membershipLevel === 3;
                 break;
             default:
                 break;
