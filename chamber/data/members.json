@@ -2,7 +2,7 @@
     "fName":"Billy",
     "lName":"Bob Joe",
     "address": {
-        "lineOne":"123rd Ave 45 South123rd Ave 45 South",
+        "lineOne":"123rd Ave 45 South",
         "lineTwo":"STE67",
         "city":"American Fork",
         "zip":84003

@@ -1,21 +1,21 @@
-const url = 'data/members.json';
+const dataUrl = 'data/members.json';
 const card = document.querySelector('#member-cards');
 
 let allMembers = [];
 
-getMemberDirectory(url);
+getMemberDirectory(dataUrl);
 
-document.getElementById("all").addEventListener("click", getMemberDirectory(url));
-document.getElementById("1").addEventListener("click", getMemberDirectory(url));
-document.getElementById("2").addEventListener("click", getMemberDirectory(url));
-document.getElementById("3").addEventListener("click", getMemberDirectory(url));
+document.getElementById("all").addEventListener("click", getMemberDirectory(dataUrl));
+document.getElementById("1").addEventListener("click", getMemberDirectory(dataUrl));
+document.getElementById("2").addEventListener("click", getMemberDirectory(dataUrl));
+document.getElementById("3").addEventListener("click", getMemberDirectory(dataUrl));
 
 async function getMemberDirectory(filePath) {
     const response = await fetch(filePath);
     const data = await response.json();
     let allMembers = [];
 
-    // console.table(data.members);
+    console.table(data.members);
 
     allMembers = data.members;
     displayMembers(allMembers);
@@ -39,6 +39,7 @@ function displayMembers (data) {
                 break;
             default:
                 break;
+                
         }}).map((data) => {
             cardList += `<div class="member-cards" id="member-cards">
             <h2 id="fullname">${data.fName} ${data.lName}</h2>
@@ -48,8 +49,5 @@ function displayMembers (data) {
         })
     
     document.getElementById("member-cards").innerHTML = cardList;
-    console.table(allMembers);
-    // console.table(cardList);
-    // console.log(cardList);
-    // console.info(cardList);
-}
+
+    }
