@@ -198,7 +198,7 @@ let allProphets = [];
 async function getProphetData(url) {
   const response = await fetch(url);
   const data = await response.json();
-  //console.table(data.prophets);
+  console.table(data.prophets);
   allProphets  = data.prophets;
   displayProphets(data.prophets); // note that you reference the prophets array of the JSON data object, not just the object
 }
@@ -210,7 +210,7 @@ const displayProphets = (prophets) => {
     prophets.forEach((prophet) => {
 
         const prophetSection = document.createElement('section');
-        prophetSection.classList.add('prophet-card');
+
         prophetSection.innerHTML = `
         <h2 class="prophet-heading">${prophet.name} ${prophet.lastname}</h2>
         <p class="prophet-desc" id="dob">Date of Birth: ${prophet.birthdate}</p>
