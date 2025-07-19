@@ -3,18 +3,26 @@ const cards = document.querySelector('#member-cards');
 
 let allMembers = [];
 
+const buttonAll   = document.getElementById("all");
+const buttonOne   = document.getElementById("1");
+const buttonTwo   = document.getElementById("2");
+const buttonThree = document.getElementById("3");
 
+function handleClick() {
+    console.log('button clicked');
+    getMemberData(url);
+}
 
-// document.getElementById('#all').addEventListener("load",  getMemberData(url));
-// document.getElementById("#all").addEventListener("click", getMemberData(url));
-// document.getElementById("#1").addEventListener("click",   getMemberData(url));
-// document.getElementById("#2").addEventListener("click",   getMemberData(url));
-// document.getElementById("#3").addEventListener("click",   getMemberData(url));
+buttonAll.addEventListener('click',   handleClick);
+buttonOne.addEventListener('click',   handleClick);
+buttonTwo.addEventListener('click',   handleClick);
+buttonThree.addEventListener('click', handleClick);
+
 
 async function getMemberData(url) {
     const response = await fetch(url);
     const data = await response.json();
-    console.table(data.members);
+    // console.table(data.members);
     allMembers = data.members;
     displayMembers(data.members);
 }
@@ -38,16 +46,21 @@ function displayMembers (data) {
                 return data;}
         
         }).map((data) => {
-            cardList += `<div class="member-cards" id="member-cards">
+            cardList += `<div class="individual-cards" id="individual-cards">
             <h2 id="fullname">${data.fName} ${data.lName}</h2>
             <p id="phone">${data.phone}</p>
             <img src="${data.portrait}" alt="${data.fName} ${data.lName}" id="portrait">
+            <p id="tier"> Tier ${data.membershipLevel} Member </p>
         </div>`;
         })
     
     document.getElementById("member-cards").innerHTML = cardList;
 
     }
+
+
+
+
 
 // const displayMembers = (members) => {
 //     cards.innerHTML = ``;

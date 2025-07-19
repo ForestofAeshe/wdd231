@@ -9,7 +9,7 @@
     },
     "phone":1234567890,
     "portrait":"image/url",
-    "membershiplevel":1
+    "membershipLevel":1
 },
 {
     "fName":"Billy",
@@ -22,7 +22,7 @@
     },
     "phone":1234567890,
     "portrait":"image/url",
-    "membershiplevel":1
+    "membershipLevel":1
 },
 {
     "fName":"Billy",
@@ -35,7 +35,7 @@
     },
     "phone":1234567890,
     "portrait":"image/url",
-    "membershiplevel":1
+    "membershipLevel":1
 },
 {
     "fName":"Billy",
@@ -48,7 +48,7 @@
     },
     "phone":1234567890,
     "portrait":"image/url",
-    "membershiplevel":1
+    "membershipLevel":1
 },
 {
     "fName":"Billy",
@@ -61,7 +61,7 @@
     },
     "phone":1234567890,
     "portrait":"image/url",
-    "membershiplevel":2
+    "membershipLevel":2
 },
 {
     "fName":"Billy",
@@ -74,7 +74,7 @@
     },
     "phone":1234567890,
     "portrait":"image/url",
-    "membershiplevel":2
+    "membershipLevel":2
 },
 {
     "fName":"Billy",
@@ -87,5 +87,5 @@
     },
     "phone":1234567890,
     "portrait":"image/url",
-    "membershiplevel":3
+    "membershipLevel":3
 }]}

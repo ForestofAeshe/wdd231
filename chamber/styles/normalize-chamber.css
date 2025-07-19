@@ -9,28 +9,61 @@
 
 body .header {
     border: black solid 2px;
+    display: flex;
+    flex-direction: column;
 }
 
 body div header {
     border: black solid 2px;
+    display: flex;
+    justify-content: center;
 }
 body div nav {
     border: black solid 2px;
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    justify-content: space-evenly;
 }
 
 body main {
-    border: black solid 2px;
+    border: pink solid 2px;
 }
 
 main .cardButton {
     border: black solid 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 main .member-cards {
-    border: black solid 2px;
+    border: purple solid 2px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 5rem;
+}
+
+main .individual-cards {
+    border: red solid 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15rem;
+    padding: 5rem;
 }
 
 footer {
     border: black solid 2px;
-    
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+footer .student-info p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
