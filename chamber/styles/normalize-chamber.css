@@ -1,10 +1,12 @@
 :root{
-    --color-one: navy;
+    --color-one: #7C7CE9;
+    --color-two: #1d1818;
+
 }
 
 * {
-    background-color: navy;
-    color: gray;
+    background-color: var(--color-one);
+    color: var(--color-two);
 }
 
 body .header {
@@ -24,35 +26,6 @@ body div nav {
     flex-direction: row;
     padding: 2rem;
     justify-content: space-evenly;
-}
-
-body main {
-    border: pink solid 2px;
-}
-
-main .cardButton {
-    border: black solid 2px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-main .member-cards {
-    border: purple solid 2px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 5rem;
-}
-
-main .individual-cards {
-    border: red solid 2px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 15rem;
-    padding: 5rem;
 }
 
 footer {
