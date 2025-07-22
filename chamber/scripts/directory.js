@@ -27,12 +27,13 @@ async function getMemberData(url) {
     displayMembers(data.members);
 }
 
-getMemberData(url);
+// getMemberData(url);
 
 function displayMembers (data) {
     let cardList = "";
 
     let cardButton = window.location.href.split("#")[1]
+    
     allMembers
     .filter((data) => 
         {
@@ -56,22 +57,3 @@ function displayMembers (data) {
     document.getElementById("member-cards").innerHTML = cardList;
 
     }
-
-
-
-
-
-// const displayMembers = (members) => {
-//     cards.innerHTML = ``;
-//     members.forEach(member => {
-//         const memberDiv = document.createElement('section');
-
-//         memberDiv.innerHTML = `
-//             <h2 id="fullname">${member.fName} ${member.lName}</h2>
-//             <p id="phone">${member.phone}</p>
-//             <img src="${member.portrait}" alt="${member.fName} ${member.lName}" id="portrait">`;
-        
-//         cards.appendChild(memberDiv);
-//     });   
-    
-// }

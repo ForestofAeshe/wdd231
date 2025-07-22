@@ -8,8 +8,9 @@
 // });
 
 
-const navlinks = document.querySelector("menuItem");
+// const navlinks = document.querySelector("menuItem");
 
-navlinks.addEventListener('click', () => {
-    
-})
+// navlinks.addEventListener('click', () => {
+
+// })
+
