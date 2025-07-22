@@ -74,22 +74,24 @@ function displayMembers (data) {
     .filter((data) => 
         {
         
-            if (index === "0") {
-                return data.membershipLevel[0];
-            } else if (index === "1") {
-                return data.membershipLevel[1];
-            } else if (index === "2") {
-                return data.membershipLevel[2];
-            }else if (index === "3") {
-                return data.membershipLevel[3];
-            }else if (index === "4") {
-                return data.membershipLevel[4];
-            }else if (index === "5") {
-                return data.membershipLevel[5];
-            }else if (index === "6") {
-                return data.membershipLevel[6];
-            } else {
-                return data;}
+            return data;
+
+            // if (index === "0") {
+            //     return data.membershipLevel[0];
+            // } else if (index === "1") {
+            //     return data.membershipLevel[1];
+            // } else if (index === "2") {
+            //     return data.membershipLevel[2];
+            // }else if (index === "3") {
+            //     return data.membershipLevel[3];
+            // }else if (index === "4") {
+            //     return data.membershipLevel[4];
+            // }else if (index === "5") {
+            //     return data.membershipLevel[5];
+            // }else if (index === "6") {
+            //     return data.membershipLevel[6];
+            // } else {
+            //     return data;}
         
         }).map((data) => {
             cardList += `<div class="individual-cards" id="individual-cards">
