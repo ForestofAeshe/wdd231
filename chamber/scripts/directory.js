@@ -49,7 +49,6 @@ function displayMembers (data) {
             cardList += `<div class="individual-cards" id="individual-cards">
             <h2 id="fullname">${data.fName} ${data.lName}</h2>
             <p id="phone">${data.phone}</p>
-            <img src="${data.portrait}" alt="${data.fName} ${data.lName}" id="portrait">
             <p id="tier"> Tier ${data.membershipLevel} Member </p>
         </div>`;
         })

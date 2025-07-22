@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/normalize-chamber.css">
+    <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Scripts -->
+    <script src="scripts/normalize.js" defer></script>
     <script src="scripts/index.js" defer></script>
     <link rel="icon" href="images/favicon.ico">
     <meta property="og:title" content="Home-WDD231-Michael Petersen">
@@ -12,28 +16,45 @@
     <meta property="og:image" content="images/logo.png">
     <meta property="og:url" content="https://forestofaeshe.github.io/wdd231">
     <title>Chamber Landing - WDD231 - Michael Petersen</title>
+    <script src="scripts/weather-api.js" defer></script>
 </head>
 <body>
-    <header>
-            <h1>Chamber of Commerce - Home</h1>
-        <button class="hamburger" id="hamburger-button" aria-label="navigation"></button>
-    </header>
-    <nav id="navigation-bar" class="navigation">            
-        <ul class="menu">
-            <li class="current"><a class="menuItem" href="#"></a>HOME</li>
-            <li><a class="menuItem" href="#"></a>CHAMBER</li>
-            <li><a class="menuItem" href="#"></a>FINAL</li>
-        </ul>
-    </nav>
+    <div class="header">
+        <header>
+            <!-- <img src="" alt=""> -->
+            <h1>American Fork Chamber of Commerce - Directory</h1>
+        </header>
+        <nav id="navigation-bar" class="navigation">            
+            <ul class="menu">
+                <li class="current"><a class="menuItem" href="/chamber/index.html" target="_self">Landing</a></li>
+                <li><a class="menuItem" href="/chamber/directory.html">Directory</a></li>
+                <li><a class="menuItem" href="#" target="_self">Join</a></li>
+                <li><a class="menuItem" href="#" target="_self">Discover</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- hero image
+call to action link to join the chamber of commerce (future page)
+current event(s) section
+weather section
+section containing two or three company 'spotlights' -->
     <main>
         <div class="main-heading">
-            <h1>Home</h1>
+            <h1>Landing</h1>
+            <img src="images/face2.png" alt="hero">
         </div>
-        <div>
-
+        <div class="current-events">
+            <p>current-events</p>
         </div>
-        <div>
-
+        <div class="weather">
+            <p>The current temperature in American Fork is <span id="current-temp"></span></p>
+            <figure>
+                <img id="weather-icon" src="" alt="">
+                <figcaption></figcaption>
+            </figure>
+        </div>
+        <div class="spotlights">
+            <p>spotlights</p>
         </div>
     </main>
     <footer>

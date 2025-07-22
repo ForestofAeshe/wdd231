@@ -1,6 +1,7 @@
 :root{
     --color-one: #7C7CE9;
     --color-two: #1d1818;
+    --color-three: #1d1818c8;
 
 }
 
@@ -10,22 +11,28 @@
 }
 
 body .header {
-    border: black solid 2px;
+    /* border: black solid 2px; */
     display: flex;
     flex-direction: column;
 }
 
 body div header {
-    border: black solid 2px;
+    /* border: black solid 2px; */
     display: flex;
     justify-content: center;
 }
-body div nav {
-    border: black solid 2px;
+
+body .navigation {
+    /* border: black solid 2px; */
     display: flex;
     flex-direction: row;
     padding: 2rem;
     justify-content: space-evenly;
+}
+
+nav .menuItem:hover {
+    background-color: white;
+    color: black;
 }
 
 footer {

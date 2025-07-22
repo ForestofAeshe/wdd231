@@ -1,7 +1,7 @@
 
 
 body main {
-    /* border: pink solid 2px; */
+    border: pink solid 0px;
 }
 
 main .cardButton {
@@ -31,4 +31,11 @@ main .individual-cards {
     width: 15rem;
     padding: 1vw;
     margin: .75vh;
+    background-image: url('/chamber/images/face2.png');
+    background-position: center;
+}
+
+.individual-cards h2, .individual-cards p {
+    background-color: var(--color-three);
+    color: var(--color-one);
 }

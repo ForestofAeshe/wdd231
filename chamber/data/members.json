@@ -1,91 +1,91 @@
 {"members" : [{
-    "fName":"Billy",
-    "lName":"Bob Joe",
+    "fName":"KFC/A&W",
+    "lName":"",
     "address": {
-        "lineOne":"123rd Ave 45 South",
-        "lineTwo":"STE67",
+        "lineOne":"439 E State St",
+        "lineTwo":"",
         "city":"American Fork",
         "zip":84003
     },
-    "phone":1234567890,
+    "phone":8013138000,
     "portrait":"image/url",
     "membershipLevel":1
 },
 {
-    "fName":"Billy",
-    "lName":"Bob Joe",
+    "fName":"Sherwin-Williams",
+    "lName":"",
     "address": {
-        "lineOne":"123rd Ave 45 South",
-        "lineTwo":"STE67",
+        "lineOne":"176 NW State St",
+        "lineTwo":"",
         "city":"American Fork",
         "zip":84003
     },
-    "phone":1234567890,
+    "phone":8017561910,
     "portrait":"image/url",
     "membershipLevel":1
 },
 {
-    "fName":"Billy",
-    "lName":"Bob Joe",
+    "fName":"Crumble",
+    "lName":" - American Fork",
     "address": {
-        "lineOne":"123rd Ave 45 South",
-        "lineTwo":"STE67",
+        "lineOne":"586 N 900 W",
+        "lineTwo":"",
         "city":"American Fork",
         "zip":84003
     },
-    "phone":1234567890,
+    "phone":8016091992,
     "portrait":"image/url",
     "membershipLevel":1
 },
 {
-    "fName":"Billy",
-    "lName":"Bob Joe",
+    "fName":"Jack and Jill Lanes",
+    "lName":"",
     "address": {
-        "lineOne":"123rd Ave 45 South",
-        "lineTwo":"STE67",
+        "lineOne":"105 S 800 E",
+        "lineTwo":"",
         "city":"American Fork",
         "zip":84003
     },
-    "phone":1234567890,
+    "phone":8017566097,
     "portrait":"image/url",
     "membershipLevel":1
 },
 {
-    "fName":"Billy",
-    "lName":"Bob Joe",
+    "fName":"Corndog",
+    "lName":"Commander",
     "address": {
-        "lineOne":"123rd Ave 45 South",
-        "lineTwo":"STE67",
-        "city":"American Fork",
-        "zip":84003
+        "lineOne":"2916 Willow Way",
+        "lineTwo":"",
+        "city":"Lehi",
+        "zip":84043
     },
-    "phone":1234567890,
+    "phone":8019469822,
     "portrait":"image/url",
     "membershipLevel":2
 },
 {
-    "fName":"Billy",
-    "lName":"Bob Joe",
+    "fName":"Matrix",
+    "lName":"Signs",
     "address": {
-        "lineOne":"123rd Ave 45 South",
-        "lineTwo":"STE67",
+        "lineOne":"706 E 50 S",
+        "lineTwo":"",
         "city":"American Fork",
         "zip":84003
     },
-    "phone":1234567890,
+    "phone":8017661272,
     "portrait":"image/url",
     "membershipLevel":2
 },
 {
-    "fName":"Billy",
-    "lName":"Bob Joe",
+    "fName":"Supercharged",
+    "lName":"Smoothies",
     "address": {
-        "lineOne":"123rd Ave 45 South",
-        "lineTwo":"STE67",
+        "lineOne":"147 E 200 S",
+        "lineTwo":"",
         "city":"American Fork",
         "zip":84003
     },
-    "phone":1234567890,
+    "phone":8017077565,
     "portrait":"image/url",
     "membershipLevel":3
 }]}

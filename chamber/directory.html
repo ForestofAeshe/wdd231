@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chamber Directory - WDD231 - Michael Petersen</title>
     <link rel="icon" href="images/favicon.ico">
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/normalize-chamber.css">
     <link rel="stylesheet" href="styles/directory.css">
+    <!-- Scripts -->
+    <script src="scripts/normalize.js" defer></script>
     <script src="scripts/directory.js" defer></script>
 
     <meta property="og:description" content="WDD231 Chamber Project Directory Page">
@@ -17,14 +20,16 @@
 <body>
     <div class="header">
         <header>
-            <img src="" alt="">
+            <!-- <img src="" alt=""> -->
             <h1>American Fork Chamber of Commerce - Directory</h1>
         </header>
-        <nav>
-            <li><a href="#">Home</a></li>
-            <li class="current"><a href="#">Directory</a></li>
-            <li><a href="#">Join</a></li>
-            <li><a href="#">Discover</a></li>
+        <nav id="navigation-bar" class="navigation">            
+            <ul class="menu">
+                <li><a class="menuItem" href="/chamber/index.html" target="_self">Landing</a></li>
+                <li class="current"><a class="menuItem" href="/chamber/directory.html">Directory</a></li>
+                <li><a class="menuItem" href="#" target="_self">Join</a></li>
+                <li><a class="menuItem" href="#" target="_self">Discover</a></li>
+            </ul>
         </nav>
     </div>
     <main>
@@ -49,10 +54,14 @@
         <div id="contact-info">
             <h2>American  Fork Contact Info</h2>
             <!-- address line 1 -->
+            <p>31 N Church Street</p>
             <!-- address line 2-->
             <!-- address city, zip-->
+             <p>American Fork, UT 84003</p>
             <!-- email -->
+            <p>Email: chamber@amreicanfork.gov</p>
             <!-- phone -->
+            <p>Phone: 801-472-7467</p>
         </div>
     </footer>
 </body>
