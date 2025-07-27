@@ -52,6 +52,30 @@ section containing two or three company 'spotlights' -->
                 <figcaption></figcaption>
             </figure>
         </div>
+        <div class="forecast" id="forecast">
+            <table>
+                <tr>
+                    <th>${data.list[0].dt_txt}</th>
+                    <th>${data.list[1].dt_txt}</th>
+                    <th>${data.list[2].dt_txt}</th>
+                </tr>
+                <tr>
+                    <td>${data.list[0].main.temp} &degF</td>
+                    <td>${data.list[1].main.temp} &degF</td>
+                    <td>${data.list[2].main.temp} &degF</td>
+                </tr>
+                <tr>
+                    <td>${icon1}</td>
+                    <td>${icon2}</td>
+                    <td>${icon3}</td>
+                </tr>
+                <tr>
+                    <td class="icon-weather"></td>
+                    <td class="icon-weather"></td>
+                    <td class="icon-weather"></td>
+                </tr>
+            </table>
+        </div>
         <div class="spotlights" id="spotlights">
             <div class="member-cards" id="member-cards"></div>
         </div>

@@ -13,6 +13,7 @@ function handleClick() {
     getMemberData(url);
 }
 
+buttonAll.addEventListener('load', handleClick());
 buttonAll.addEventListener('click',   handleClick);
 buttonOne.addEventListener('click',   handleClick);
 buttonTwo.addEventListener('click',   handleClick);
@@ -33,7 +34,7 @@ function displayMembers (data) {
     let cardList = "";
 
     let cardButton = window.location.href.split("#")[1]
-    
+
     allMembers
     .filter((data) => 
         {

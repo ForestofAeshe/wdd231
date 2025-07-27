@@ -4,11 +4,11 @@ const currentTemp = document.querySelector('#current-temp');
 const weatherIcon = document.querySelector('#weather-icon'); 
 const captionDesc = document.querySelector('figcaption'); 
 
-const url = 'https://api.openweathermap.org/data/2.5/weather?lat=40.37&lon=111.79&units=imperial&appid=a055ebbdb26fcd89a865ee4416154bd5';
+const urlWeather = 'https://api.openweathermap.org/data/2.5/weather?lat=40.37&lon=111.79&units=imperial&appid=a055ebbdb26fcd89a865ee4416154bd5';
 
-async function apiFetch() {
+async function fetchWeather() {
     try {
-        const response = await fetch(url);
+        const response = await fetch(urlWeather);
         if (response.ok) {
             const data = await response.json();
             console.log(data);
@@ -21,7 +21,7 @@ async function apiFetch() {
     }
 }
 
-apiFetch();
+fetchWeather();
 
 function displayResults(data) {
     currentTemp.innerHTML = `${data.main.temp}&deg;F`;
@@ -31,6 +31,79 @@ function displayResults(data) {
     weatherIcon.setAttribute('alt',desc);
     captionDesc.textContent = `${desc}`;
 }
+
+// forecast api
+
+const forecast = document.querySelector('.forecast')
+const urlForecast = 'https://api.openweathermap.org/data/2.5/forecast?lat=40.37&lon=111.79&units=imperial&appid=a055ebbdb26fcd89a865ee4416154bd5'
+
+async function fetchForecast() {
+    try{
+        const response = await fetch(urlForecast);
+        if (response.ok) {
+            const data = await response.json();
+            console.log(data);
+            displayForecast(data);
+        } else {
+            throw Error(await response.text());
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
+    
+fetchForecast();
+
+// displayForecast();
+
+function displayForecast(data) {
+    let forecastCard = "";
+    //${data.main.temp}&deg;F
+    let icon1 = getWeatherIconOne(data);
+    let icon2 = getWeatherIconTwo(data);
+    let icon3 = getWeatherIconThree(data);
+    forecastCard += ``;
+    document.getElementById("forecast").innerHTML = forecastCard;
+
+};
+
+function getWeatherIconOne(data) {
+    let dummyData = data;
+    let index = 0;
+    const srcIcon = `https://openweathermap.org/img/wn${data.list[index].weather.icon}@2x.png`
+    let desc = data.list[index].weather.description;
+    iconWeather.setAttribute(`SRC`,srcIcon);
+    iconWeather.setAttribute('alt',desc);
+    captionDesc.textContent = `${desc}`;
+};
+
+function getWeatherIconTwo(data) {
+    let dummyData = data;
+    let index = 1;
+    const iconsrc = `https://openweathermap.org/img/wn${data.list[index].weather.icon}@2x.png`
+    let desc = data.list[index].weather.description;
+    weatherIcon.setAttribute(`SRC`,iconsrc);
+    weatherIcon.setAttribute('alt',desc);
+    captionDesc.textContent = `${desc}`;
+};
+
+function getWeatherIconThree(data) {
+    let dummyData = data;
+    let index = 2;
+    const iconsrc = `https://openweathermap.org/img/wn${data.list[index].weather.icon}@2x.png`
+    let desc = data.list[index].weather.description;
+    weatherIcon.setAttribute(`SRC`,iconsrc);
+    weatherIcon.setAttribute('alt',desc);
+    captionDesc.textContent = `${desc}`;
+};
+
+
+function getDayName(data, index) {
+    const dummyData = data;
+    const today = new Date('2025-08-28 04:00:25');
+    console.log(today);
+}
+
 
 
 // random index
@@ -53,8 +126,8 @@ let allMembers = [];
 function handleLoad() {
     getSpotlight(memberFile);
 }
-
-document.addEventListener('DOMContentLoaded', handleLoad);
+handleLoad();
+// document.addEventListener('DOMContentLoaded', handleLoad());
 
 async function getSpotlight(memberFile) {
     const response = await fetch(memberFile);
@@ -64,43 +137,20 @@ async function getSpotlight(memberFile) {
     displayMembers(data.members);
 }
 
-function displayMembers (data) {
-    let cardList = "";
-
-    let index = randomInteger;
-    console.log(index);
-
-    allMembers
-    .filter((data) => 
-        {
+    function displayMembers () {
+        let cardList = "";
+        let index = randomInteger;
+        let randomMember = [];
+        randomMember = allMembers[randomInteger];
+        console.log(randomMember);
         
-            return data;
 
-            // if (index === "0") {
-            //     return data.membershipLevel[0];
-            // } else if (index === "1") {
-            //     return data.membershipLevel[1];
-            // } else if (index === "2") {
-            //     return data.membershipLevel[2];
-            // }else if (index === "3") {
-            //     return data.membershipLevel[3];
-            // }else if (index === "4") {
-            //     return data.membershipLevel[4];
-            // }else if (index === "5") {
-            //     return data.membershipLevel[5];
-            // }else if (index === "6") {
-            //     return data.membershipLevel[6];
-            // } else {
-            //     return data;}
-        
-        }).map((data) => {
-            cardList += `<div class="individual-cards" id="individual-cards">
-            <h2 id="fullname">${data.fName} ${data.lName}</h2>
-            <p id="phone">${data.phone}</p>
-            <p id="tier"> Tier ${data.membershipLevel} Member </p>
-        </div>`;
-        })
-    
-    document.getElementById("member-cards").innerHTML = cardList;
+        cardList += `<div class="individual-cards" id="individual-cards">
+                <h2 id="fullname">${randomMember.fName} ${randomMember.lName}</h2>
+                <p id="phone">${randomMember.phone}</p>
+                <p id="tier"> Tier ${randomMember.membershipLevel} Member </p>
+            </div>`
 
+        document.getElementById("member-cards").innerHTML = cardList;
     }
+
