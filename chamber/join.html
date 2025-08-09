@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/normalize-chamber.css">
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/join.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- Scripts -->
     <script src="scripts/normalize.js" defer></script>
-    <script src="scripts/index.js" defer></script>
+    <script src="scripts/join.js" defer></script>
     <link rel="icon" href="images/favicon.ico">
     <meta property="og:title" content="Home-WDD231-Michael Petersen">
     <meta property="og:description" content="A webpage made for the Pathway WDD231 class by Michael Petersen.">
@@ -32,30 +32,48 @@
             </ul>
         </nav>
     </div>
-    <!-- hero image
-call to action link to join the chamber of commerce (future page)
-current event(s) section
-weather section
-section containing two or three company 'spotlights' -->
     <main>
-        <div class="main-heading">
-            <h1>Landing</h1>
-            <img src="images/face2.png" alt="hero">
+        <div>
+
         </div>
-        <div class="current-events">
-            <p>current-events</p>
-        </div>
-        <div class="weather">
-            <p>The current temperature in American Fork is <span id="current-temp"></span></p>
-            <figure>
-                <img id="weather-icon" src="" alt="">
-                <figcaption></figcaption>
-            </figure>
-        </div>
-        <div class="forecast" id="forecast">
-        </div>
-        <div class="spotlights" id="spotlights">
-            <div class="member-cards" id="member-cards"></div>
+        <div class="form">
+            <form action="thankyou.html" method="get">
+                <!-- fname -->
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname" autocomplete="given-name" placeholder="First Name" required><br><br>
+                <!-- lname -->
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lname" autocomplete="family-name" placeholder="Last Name" required><br><br>
+                <!-- org title -->
+                <label for="org-title"></label>
+                <input type="text" id="organization-title">
+                <!-- email -->
+                <label for="email"></label>
+                <input type="email" id="email" name="email" title="email" autocomplete="email" placeholder="username@domain.com" required>
+                <!-- mobilephone -->
+                <label for="phone-number"></label>
+                <input type="tel" name="tel" title="phone-number" autocomplete="tel" placeholder="+1 (123)-456-7890" required>
+                <!-- busines/orgname -->
+                <label for="org-name"></label>
+                <input type="text" name="org-name" title="organization" autocomplete="organization" required>
+                <!-- membershiplevel -->
+                    <!-- np -->
+                    <!-- 1 -->
+                    <!-- 2 -->
+                    <!-- 3 -->
+                <label for="membership-level"></label>
+                <input type="text">
+                <!-- description -->
+                <label for="org-description"></label>
+                <input type="text">
+                <!-- timestamp -->
+                <label for="timestamp"></label>
+                <input type="hidden" name="timestamp" id="timestamp">
+                <!-- submission button ("sign-up") -->
+                <button>
+                    <input type="submit">Sign Up
+                </button>
+            </form>
         </div>
     </main>
     <footer>
