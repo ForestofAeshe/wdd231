@@ -11,7 +11,7 @@ async function fetchWeather() {
         const response = await fetch(urlWeather);
         if (response.ok) {
             const data = await response.json();
-            console.log(data);
+            // console.log(data);
             displayResults(data);
         } else {
             throw Error(await response.text());
@@ -34,7 +34,6 @@ function displayResults(data) {
 
 // forecast api
 
-const forecast = document.querySelector('.forecast')
 const urlForecast = 'https://api.openweathermap.org/data/2.5/forecast?lat=40.37&lon=111.79&units=imperial&appid=a055ebbdb26fcd89a865ee4416154bd5'
 
 async function fetchForecast() {
@@ -43,67 +42,47 @@ async function fetchForecast() {
         if (response.ok) {
             const data = await response.json();
             console.log(data);
-            displayForecast(data);
+            // console.table(data.list);
+            displayForecast(data.list);
         } else {
             throw Error(await response.text());
         }
     } catch (error) {
         console.log(error);
     }
-}
-    
-fetchForecast();
+};
 
 // displayForecast();
 
 function displayForecast(data) {
     let forecastCard = "";
-    //${data.main.temp}&deg;F
-    let icon1 = getWeatherIconOne(data);
-    let icon2 = getWeatherIconTwo(data);
-    let icon3 = getWeatherIconThree(data);
-    forecastCard += ``;
-    document.getElementById("forecast").innerHTML = forecastCard;
 
+    data.map((item,index) =>{
+        if (((index%8)-2 === 0) && index < 24) {
+            const datetime = new Date(item.dt_txt).toLocaleDateString("en-US",{weekday: "long"});
+            const iconsrc = `https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`;
+                // let desc = item.weather[0].description;
+                // weatherIcon.setAttribute(`SRC`,iconsrc);
+                // weatherIcon.setAttribute('alt',desc);
+                // captionDesc.textContent = `${desc}`;
+
+            forecastCard += `
+                <div class="forecastData">
+                    <h3>${datetime}</h3>
+                    <p>${item.main.temp}&deg;F</p>
+                    <figure>
+                        <img src=${iconsrc} alt="${item.weather[0].description}">
+                        <figcaption>${item.weather[0].description}</figcaption>
+                    </figure>
+                </div>
+            `;
+        }
+    });
+
+        document.getElementById("forecast").innerHTML = forecastCard;
 };
 
-function getWeatherIconOne(data) {
-    let dummyData = data;
-    let index = 0;
-    const srcIcon = `https://openweathermap.org/img/wn${data.list[index].weather.icon}@2x.png`
-    let desc = data.list[index].weather.description;
-    iconWeather.setAttribute(`SRC`,srcIcon);
-    iconWeather.setAttribute('alt',desc);
-    captionDesc.textContent = `${desc}`;
-};
-
-function getWeatherIconTwo(data) {
-    let dummyData = data;
-    let index = 1;
-    const iconsrc = `https://openweathermap.org/img/wn${data.list[index].weather.icon}@2x.png`
-    let desc = data.list[index].weather.description;
-    weatherIcon.setAttribute(`SRC`,iconsrc);
-    weatherIcon.setAttribute('alt',desc);
-    captionDesc.textContent = `${desc}`;
-};
-
-function getWeatherIconThree(data) {
-    let dummyData = data;
-    let index = 2;
-    const iconsrc = `https://openweathermap.org/img/wn${data.list[index].weather.icon}@2x.png`
-    let desc = data.list[index].weather.description;
-    weatherIcon.setAttribute(`SRC`,iconsrc);
-    weatherIcon.setAttribute('alt',desc);
-    captionDesc.textContent = `${desc}`;
-};
-
-
-function getDayName(data, index) {
-    const dummyData = data;
-    const today = new Date('2025-08-28 04:00:25');
-    console.log(today);
-}
-
+let data = fetchForecast();
 
 
 // random index
@@ -132,7 +111,7 @@ handleLoad();
 async function getSpotlight(memberFile) {
     const response = await fetch(memberFile);
     const data = await response.json();
-    console.table(data.members);
+    // console.table(data.members);
     allMembers = data.members;
     displayMembers(data.members);
 }
@@ -142,7 +121,7 @@ async function getSpotlight(memberFile) {
         let index = randomInteger;
         let randomMember = [];
         randomMember = allMembers[randomInteger];
-        console.log(randomMember);
+        // console.log(randomMember);
         
 
         cardList += `<div class="individual-cards" id="individual-cards">

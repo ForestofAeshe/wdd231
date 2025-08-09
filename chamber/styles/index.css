@@ -104,10 +104,16 @@ main .forecast {
     display: grid;
     grid-column: 2/4;
     grid-row: 3/4;
-    
+    display: flex;
+    flex-direction: row;
 }
 
 .forecast * {
     background-color: transparent;
     color: var(--color-one);
 }
+/* 
+main .forecast {
+    display: flex;
+    flex-direction: row;
+} */
