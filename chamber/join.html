@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles/join.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- Scripts -->
-    <script src="scripts/normalize.js" defer></script>
+    <!-- <script src="scripts/normalize.js" defer></script> -->
     <script src="scripts/join.js" defer></script>
     <link rel="icon" href="images/favicon.ico">
     <meta property="og:title" content="Home-WDD231-Michael Petersen">
@@ -25,9 +25,9 @@
         </header>
         <nav id="navigation-bar" class="navigation">            
             <ul class="menu">
-                <li class="current"><a class="menuItem" href="/chamber/index.html" target="_self">Landing</a></li>
+                <li><a class="menuItem" href="/chamber/index.html" target="_self">Landing</a></li>
                 <li><a class="menuItem" href="/chamber/directory.html">Directory</a></li>
-                <li><a class="menuItem" href="/chamber/join.html" target="_self">Join</a></li>
+                <li class="current"><a class="menuItem" href="/chamber/join.html" target="_self">Join</a></li>
                 <li><a class="menuItem" href="#" target="_self">Discover</a></li>
             </ul>
         </nav>
@@ -37,42 +37,66 @@
 
         </div>
         <div class="form">
-            <form action="thankyou.html" method="get">
-                <!-- fname -->
-                <label for="fname">First name:</label>
-                <input type="text" id="fname" name="fname" autocomplete="given-name" placeholder="First Name" required><br><br>
-                <!-- lname -->
-                <label for="lname">Last name:</label>
-                <input type="text" id="lname" name="lname" autocomplete="family-name" placeholder="Last Name" required><br><br>
-                <!-- org title -->
-                <label for="org-title"></label>
-                <input type="text" id="organization-title">
-                <!-- email -->
-                <label for="email"></label>
-                <input type="email" id="email" name="email" title="email" autocomplete="email" placeholder="username@domain.com" required>
-                <!-- mobilephone -->
-                <label for="phone-number"></label>
-                <input type="tel" name="tel" title="phone-number" autocomplete="tel" placeholder="+1 (123)-456-7890" required>
-                <!-- busines/orgname -->
-                <label for="org-name"></label>
-                <input type="text" name="org-name" title="organization" autocomplete="organization" required>
-                <!-- membershiplevel -->
-                    <!-- np -->
-                    <!-- 1 -->
-                    <!-- 2 -->
-                    <!-- 3 -->
-                <label for="membership-level"></label>
-                <input type="text">
-                <!-- description -->
-                <label for="org-description"></label>
-                <input type="text">
-                <!-- timestamp -->
-                <label for="timestamp"></label>
-                <input type="hidden" name="timestamp" id="timestamp">
-                <!-- submission button ("sign-up") -->
-                <button>
-                    <input type="submit">Sign Up
-                </button>
+            <form action="thankyou.html" method="get" id="myForm">
+                <div class="form-item">
+                    <!-- fname -->
+                    <label for="fname">First name:</label>
+                    <input type="text" id="fname" name="fname" autocomplete="given-name" placeholder="First Name" required><br><br>
+                </div>
+                <div class="form-item">
+                    <!-- lname -->
+                    <label for="lname">Last name:</label>
+                    <input type="text" id="lname" name="lname" autocomplete="family-name" placeholder="Last Name" required><br><br>
+                </div>
+                <div class="form-item">
+                    <!-- org title -->
+                    <label for="org-title">Job Title:</label>
+                    <input type="text" id="organization-title">
+                </div>
+                <div class="form-item">
+                    <!-- email -->
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" title="email" autocomplete="email" placeholder="username@domain.com" required>
+                </div>
+                <div class="form-item">
+                    <!-- mobilephone -->
+                    <label for="phone-number">Mobile:</label>
+                    <input type="tel" name="tel" title="phone-number" id="phone" autocomplete="tel" placeholder="+1 (123)-456-7890" required>
+                </div>
+                <div class="form-item">
+                    <!-- busines/orgname -->
+                    <label for="org-name">Organization Name:</label>
+                    <input type="text" name="org-name" id="org-name" title="organization" autocomplete="organization" required>
+                </div>
+                <div class="form-item">
+                    <!-- membershiplevel -->
+                        <!-- np -->
+                        <!-- 1 -->
+                        <!-- 2 -->
+                        <!-- 3 -->
+                    <label for="membership-level">Membership Tier</label>
+                    <select name="membership-level" id="membership-level-dropdown">
+                        <option value="non-profit">Non Profit</option>
+                        <option value="tier-one">Tier 1</option>
+                        <option value="tier-two">Tier 2</option>
+                        <option value="tier-three">Tier 3</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <!-- description -->
+                    <label for="org-description" id="org-desc">Organization Description:</label>
+                    <input type="text">
+                </div>
+                <div class="form-item">
+                    <!-- timestamp -->
+                    <input type="hidden" name="timestamp" id="timestamp">
+                </div>
+                <div class="form-item">
+                    <!-- submission button ("sign-up") -->
+                    <button>
+                        <input type="submit" value="Sign-up">
+                    </button>
+                </div>
             </form>
         </div>
     </main>

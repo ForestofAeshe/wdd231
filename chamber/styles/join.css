@@ -1,3 +1,35 @@
 .form input, form select, .form option {
     background-color: white;
 }
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 40;
+    justify-self: left;
+    margin-left: 15vw;
+    padding: 2vh .5vw;
+    border: solid var(--color-three);
+    border-radius: 2.5vw;
+    overflow: hidden;
+}
+
+.form input, .form select {
+    padding: .5vw .5vh;
+    display: flex;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.form button {
+    display: flex;
+    justify-self: center;
+}
+
+.form-item {
+    padding: .5vh 1vw;
+}
